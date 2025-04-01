@@ -82,13 +82,12 @@ def mapa(request):
     else:
         return render(request, 'mapa.html', {'error': 'Nulo'})
 
-
-def guardar_ubicacion(request):
-    if request.method == 'POST':
-         lat = request.POST.get('lat')
-         lon = request.POST.get('lon')  
-         nueva_ubicacion = Ubicacion.objects.create(
-            lat = float(lat),
-            lon = float(lon),
-        )
-    return render(request, 'mapa.html')
+# def guardar_ubicacion(request):
+#     if request.method == 'POST':
+#          lat = request.POST.get('lat')
+#          lon = request.POST.get('lon')  
+#          nueva_ubicacion = Ubicacion.objects.create(
+#             lat = float(lat),
+#             lon = float(lon),
+#         )
+#     return render(request, 'mapa.html')
